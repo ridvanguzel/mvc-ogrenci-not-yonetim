@@ -1,0 +1,18 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_KULUP
+@{
+    ViewBag.Title = "YeniKulupEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="YeniKulupEkle" method="post" class="form-group mt-5">
+
+    <label class="fw-bold">Kulüp Adı : </label>
+    <input type="text" name="KULUPAD" value="" class="form-control mt-3" />
+    <label class="fw-bold">Kulüp Kontenjan : </label>
+    <input type="text" name="KULUPKONTENJAN" value="" class="form-control mt-3" />
+
+    <button class="btn btn-success mt-3">KULÜP EKLE</button>
+</form>
+
+

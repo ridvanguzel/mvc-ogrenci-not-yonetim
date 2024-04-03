@@ -1,0 +1,23 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 240px;
+    height: 100vh;
+    background-color: #0d93ae;
+    padding: 40px 12px;
+    left: 0;
+    position: fixed;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 20px;
+}
+
+    .nav-link:hover {
+        color: #212121 !important;
+    }

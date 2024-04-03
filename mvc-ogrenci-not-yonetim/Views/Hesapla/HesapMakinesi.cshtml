@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "HesapMakinesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-5">Hesap Makinesi</h2>
+
+
+<form action="HesapMakinesi" class="form-group" method="post">
+
+
+    <label class="mt-5">Sayi 1 :</label>
+    <input type="text" name="sayi1" id="sayi1"  class="mt-1 form-control"/>
+    <label class="mt-5">Sayi 2 :</label>
+    <input type="text" name="sayi2" id="sayi2"  class="mt-1 form-control" />
+
+    <div>
+        <span>@ViewBag.snc</span>
+    </div>
+
+    <button class="btn btn-warning mt-3">Sonuç Hesapla</button>
+</form>

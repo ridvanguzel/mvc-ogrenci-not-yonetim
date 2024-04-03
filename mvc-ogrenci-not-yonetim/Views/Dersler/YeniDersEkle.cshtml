@@ -1,0 +1,15 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_DERSLER
+@{
+    ViewBag.Title = "YeniDersEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="YeniDersEkle" method="post" class="form-group mt-5">
+
+    <label class="fw-bold">Ders Adı : </label>
+    <input type="text" name="DERSAD" value="" class="form-control mt-3" />
+
+    <button class="btn btn-success mt-3">Dersi Ekle</button>
+</form>
+

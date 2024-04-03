@@ -1,0 +1,32 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_NOTLAR
+@{
+    ViewBag.Title = "NotGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-3">Öğrenci Notu Güncelle</h2>
+
+@using (Html.BeginForm("NotGuncelle", "Notlar", FormMethod.Post))
+{
+    <label for="OGRID">ÖĞRENCİ ID</label>
+    @Html.TextBoxFor(m => m.OGRID, new { @class = "form-control" })
+    <label for="DERSID">DERS ID</label>
+    @Html.TextBoxFor(m => m.DERSID, new { @class = "form-control" })
+    <label for="SINAV1">SINAV 1</label>
+    @Html.TextBoxFor(m => m.SINAV1, new { @class = "form-control" })
+    <label for="SINAV2">SINAV 2</label>
+    @Html.TextBoxFor(m => m.SINAV2, new { @class = "form-control" })
+    <label for="SINAV3">SINAV 3</label>
+    @Html.TextBoxFor(m => m.SINAV3, new { @class = "form-control" })
+    <label for="PROJE">PROJE</label>
+    @Html.TextBoxFor(m => m.PROJE, new { @class = "form-control" })
+    <label for="ORTALAMA">ORTALAMA</label>
+    @Html.TextBoxFor(m => m.ORTALAMA, new { @class = "form-control" })
+    <label for="DURUM">DURUM</label>
+    @Html.TextBoxFor(m => m.DURUM, new { @class = "form-control" })
+
+
+    <button class="btn btn-success">ÖĞRENCİ NOTUNU GÜNCELLE</button>
+}
+

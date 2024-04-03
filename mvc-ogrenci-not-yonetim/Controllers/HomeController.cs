@@ -1,0 +1,43 @@
+﻿
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+
+
+namespace mvc_ogrenci_not_yonetim.Controllers
+{
+    public class HomeController : Controller
+    {
+        RG_MVCOGRENCIYONETIMEntities1 db = new RG_MVCOGRENCIYONETIMEntities1(); // burada bu kodu yazdık çünkü public olarak her action resultta kullanmak için.
+     
+        public ActionResult Index()
+        {
+
+           
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+    }
+
+
+}
+
+

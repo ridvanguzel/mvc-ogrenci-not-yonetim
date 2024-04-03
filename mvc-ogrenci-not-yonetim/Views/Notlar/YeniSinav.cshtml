@@ -1,0 +1,30 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_NOTLAR
+@{
+    ViewBag.Title = "YeniSinav";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="YeniSinav" method="post" class="mt-5">
+
+
+
+    <label>Öğrenci ID :</label>
+    <input type="text" name="OGRID" value="" class="form-control mt-3" />
+    <label>Ders Adı :</label>
+    <input type="text" name="DERSID" value="" class="form-control mt-3" />
+    <label>SINAV 1</label>
+    <input type="text" name="SINAV1" value="" class="form-control mt-3" />
+    <label>SINAV 2</label>
+    <input type="text" name="SINAV2" value="" class="form-control mt-3" />
+    <label>SINAV 3</label>
+    <input type="text" name="SINAV3" alue="" class="form-control mt-3" />
+    <label>PROJE</label>
+    <input type="text" name="PROJE" value="" class="form-control mt-3" />
+    <label>ORTALAMA</label>
+    <input type="text" name="ORTALAMA" value="" class="form-control mt-3" />
+    <label>DURUM</label>
+    <input type="text" name="DURUM" value="" class="form-control mt-3" /> 
+    <button class="btn btn-success mt-5">Yeni Sınav Notu Ekle </button>
+</form>
+

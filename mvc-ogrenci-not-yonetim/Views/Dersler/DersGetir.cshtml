@@ -1,0 +1,19 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_DERSLER
+@{
+    ViewBag.Title = "DersGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-3">Ders Güncelle</h2>
+
+@using (@Html.BeginForm("DersGuncelle", "Dersler", FormMethod.Post, new { @class = "form-group" })){
+
+
+@Html.LabelFor(m => m.DERSAD);
+@Html.TextBoxFor(m => m.DERSAD, new { @class = "form-control"})
+@Html.HiddenFor(m => m.DERSID);
+<button class="btn btn-success mt-4">DERS GÜNCELLE</button>
+
+}
+

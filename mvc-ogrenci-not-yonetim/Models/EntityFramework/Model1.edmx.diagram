@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1bf6fd9bfbcc46b2a46a7ce106118221" Name="Diagram1">
+        <EntityTypeShape EntityType="RG_MVCOGRENCIYONETIMModel.TBL_DERSLER" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RG_MVCOGRENCIYONETIMModel.TBL_KULUP" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RG_MVCOGRENCIYONETIMModel.TBL_NOTLAR" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RG_MVCOGRENCIYONETIMModel.TBL_OGRENCILER" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="RG_MVCOGRENCIYONETIMModel.FK_TBL_NOTLAR_TBL_DERSLER" ManuallyRouted="false" />
+        <AssociationConnector Association="RG_MVCOGRENCIYONETIMModel.FK_TBL_OGRENCILER_TBL_KULUP" ManuallyRouted="false" />
+        <AssociationConnector Association="RG_MVCOGRENCIYONETIMModel.FK_TBL_NOTLAR_TBL_OGRENCILER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

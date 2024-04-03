@@ -1,0 +1,22 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_KULUP
+@{
+    ViewBag.Title = "KulupGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-3">Kulüp Bilgileri</h2>
+
+
+@*BU YAZDIGIMIZ KODLAR İLE BİRLİKTE KULLANICI DERS SAYFASINDA DERS GÜNCELLEYE BASTIGI ZAMAN DERSGETIR SAYFASINA GİDECEK VE ORADA DERS ADI GİRİP GUNCELLEDIKTEN SORNA BUTONA BASTIGINDA POST METODU İLE ACTION OLARAK KULUP GUNCELLE ÇALIŞACAK*@
+@using (Html.BeginForm("KulupGuncelle", "Kulupler", FormMethod.Post))
+{
+    <div class="form-group">
+
+        <label for="KULUPAD">KULÜP ADI</label>
+        @Html.TextBoxFor(m => m.KULUPAD, new { @class = "form-control" })
+
+    </div>
+    @Html.HiddenFor(m => m.KULUPID)
+    <button class="btn btn-success mt-3">KULÜP GÜNCELLE</button>
+}

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/fontawesome-free-6.4.2-web/css/fontawesome.min.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header class="header d-flex flex-column">
+        <h4 class="text-white">MVC Öğrenci Not Sistemi Projesi</h4>
+        <nav class="mt-5">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item d-flex   align-items-center gap-4">
+                    <i class="fa-solid fa-list text-white"></i>
+                    <a class="nav-link" aria-current="page" href="/Ogrenciler/Ogrenciler">Öğrenci Listesi</a>
+                </li>
+                <li class="nav-item d-flex   align-items-center gap-4">
+                    <i class="fa-solid fa-person-chalkboard text-white"></i>
+                    <a class="nav-link" href="/Dersler/Dersler">Dersler</a>
+                    
+                </li>
+
+                <li class="nav-item d-flex   align-items-center gap-4">
+                    <i class="fa-solid fa-comment text-white"></i>
+                    <a class="nav-link" href="/Kulupler/Kulupler">Kulüpler</a>
+                </li>
+                <li class="nav-item d-flex   align-items-center gap-4">
+                    <i class="fa-solid fa-marker text-white"></i>
+                    <a class="nav-link" href="/Notlar/Notlar">Sınav Notları</a>
+                </li>
+                <li class="nav-item d-flex  align-items-center gap-4">
+                    <i class="fa-solid fa-address-book text-white"></i>
+                    <a class="nav-link" href="/Iletisim/Iletisim">İletişim</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container" style="padding-left:240px">
+        <main class="d-flex flex-column">
+            @RenderBody()
+
+        </main>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

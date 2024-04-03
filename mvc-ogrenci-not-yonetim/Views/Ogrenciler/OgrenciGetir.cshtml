@@ -1,0 +1,31 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model TBL_OGRENCILER
+@{
+    ViewBag.Title = "OgrenciGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mt-3">Ögrenci Güncelle</h2>
+
+@using (Html.BeginForm("OgrencıGuncelle", "Ogrenciler", FormMethod.Post))
+{
+
+    <label for="OGRAD">ÖĞRENCİ ADI</label>
+    @Html.TextBoxFor(m => m.OGRAD, new { @class = "form-control" })
+
+    <label for="OGRSOYAD">ÖĞRENCİ SOYADI</label>
+    @Html.TextBoxFor(m => m.OGRSOYAD, new { @class = "form-control" })
+
+    <label for="OGRSOYAD">ÖĞRENCİ CİNSİYET</label>
+    @Html.TextBoxFor(m => m.OGRCINSIYET, new { @class = "form-control" })
+
+    <label for="OGRKULUP">ÖĞRENCİ KULÜP</label>
+    @Html.TextBoxFor(m => m.OGRKULUP, new { @class = "form-control" })
+
+    <label for="OGRFOTOGRAF">ÖĞRENCİ FOTOGRAF</label>
+    @Html.TextBoxFor(m => m.OGRFOTOGRAF, new { @class = "form-control" })
+
+    @Html.HiddenFor(m => m.OGRID)
+    <button class="btn btn-success">ÖĞRENCİ GÜNCELLE</button>
+}
+

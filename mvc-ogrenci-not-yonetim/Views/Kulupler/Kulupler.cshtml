@@ -1,0 +1,38 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model List<TBL_KULUP>
+@{
+    ViewBag.Title = "Kulupler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<table class="table table-bordered mt-5">
+
+    <thead>
+        <tr>
+            <th>KULÜP ID</th>
+            <th>KULÜP ADI</th>
+            <th>KULÜP KONTENJAN</th>
+            <th colspan="2">İŞLEMLER</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.KULUPID</td>
+                <td>@item.KULUPAD</td>
+                <td>@item.KULUPKONTENJAN</td>
+                <td><a href="/Kulupler/KulupSil/@item.KULUPID" class="btn btn-danger">SİL</a> </td>
+                <td><a href="/Kulupler/KulupGetir/@item.KULUPID" class="btn btn-warning">GÜNCELLE</a> </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+<a href="/Kulupler/YeniKulupEkle" class="btn btn-primary">Yeni Kulüp Ekle</a>

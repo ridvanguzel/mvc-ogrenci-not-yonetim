@@ -1,0 +1,41 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model List<TBL_OGRENCILER>
+@{
+    ViewBag.Title = "Ogrenciler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-bordered mt-5">
+
+    <thead>
+        <tr>
+            <th>ÖGRENCİ ID</th>
+            <th>ÖGRENCİ ADI</th>
+            <th>ÖGRENCİ SOYADI</th>
+            <th>ÖGRENCİ CİNSİYET</th>
+            <th>ÖGRENCİ KULÜP</th>
+            <th>ÖGRENCİ FOTOĞRAF</th>
+            <th>İŞLEMLER</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OGRID</td>
+                <td>@item.OGRAD</td>
+                <td>@item.OGRSOYAD</td>
+                <td>@item.OGRCINSIYET</td>
+                <td>@item.TBL_KULUP.KULUPAD</td>
+                <td>@item.OGRFOTOGRAF</td>
+                <td><a href="/Ogrenciler/OgrenciSil/@item.OGRID" class="btn btn-danger">SİL</a> </td>
+                <td><a href="/Ogrenciler/OgrenciGetir/@item.OGRID" class="btn btn-warning">GÜNCELLE</a> </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+
+<a href="/Ogrenciler/OgrenciEkle" class="btn btn-primary mt-5">Öğrenci Ekle</a>

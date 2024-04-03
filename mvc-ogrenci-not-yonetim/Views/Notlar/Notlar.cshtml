@@ -1,0 +1,51 @@
+﻿@using mvc_ogrenci_not_yonetim.Models.EntityFramework;
+@model List<TBL_NOTLAR>
+@{
+    ViewBag.Title = "Öğrenci Notları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-bordered mt-5">
+
+    <thead>
+        <tr>
+            <th>NOT ID</th>
+            <th>DERS AD</th>
+            <th>ÖĞRENCİ İSİM</th>
+            <th>ÖĞRENCİ SOYAD</th>
+            <th>SINAV 1</th>
+            <th>SINAV 2</th>
+            <th>SINAV 3</th>
+            <th>PROJE</th>
+            <th>ORTALAMA</th>
+            <th>DURUM</th>
+            <th colspan="2">İŞLEMLER</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NOTID</td>
+                <td>@item.TBL_DERSLER.DERSAD</td>
+                <td>@item.TBL_OGRENCILER.OGRAD</td>
+                <td>@item.TBL_OGRENCILER.OGRSOYAD</td>
+                <td>@item.SINAV1</td>
+                <td>@item.SINAV2</td>
+                <td>@item.SINAV3</td>
+                <td>@item.PROJE</td>
+                <td>@item.ORTALAMA</td>
+                <td>@item.DURUM</td>
+                <td><a href="/Notlar/NotGetir/@item.NOTID" class="btn btn-warning">GÜNCELLE</a> </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+
+<div class="mb-5">
+    <a href="/Notlar/YeniSinav" class="btn btn-primary mt-5">Yeni Sınav Notu Ekle</a>
+    <a href="/Hesapla/HesapMakinesi" class="btn btn-warning mt-5">Hesapla</a>
+</div>
