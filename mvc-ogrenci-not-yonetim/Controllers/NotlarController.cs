@@ -36,6 +36,10 @@ namespace mvc_ogrenci_not_yonetim.Controllers
 
         public ActionResult NotGetir(int id)
         {
+
+         
+
+
             var notgetir = db.TBL_NOTLAR.Find(id);
             return View("NotGetir", notgetir);
         }
@@ -51,10 +55,20 @@ namespace mvc_ogrenci_not_yonetim.Controllers
             }
             if(Model.islem == "NOTGUNCELLE")
             {
-
+                var notguncelle = db.TBL_NOTLAR.Find(n1.OGRID);
+                notguncelle.SINAV1 = n1.SINAV1;
+                notguncelle.SINAV2 = n1.SINAV2;
+                notguncelle.SINAV3 = n1.SINAV3;
+                notguncelle.PROJE = n1.PROJE;
+                notguncelle.ORTALAMA = n1.ORTALAMA;
+                db.SaveChanges();
+                return RedirectToAction("Notlar", "Notlar");
             }
+
+
 
             return View();
         }
+        
     }
 }

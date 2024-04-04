@@ -11,8 +11,12 @@
 {
     <label for="OGRID">ÖĞRENCİ ID</label>
     @Html.TextBoxFor(m => m.OGRID, new { @class = "form-control" })
-    <label for="DERSID">DERS ID</label>
+
+
+    <label for="DERSAD">DERS ID</label>
     @Html.TextBoxFor(m => m.DERSID, new { @class = "form-control" })
+
+
     <label for="SINAV1">SINAV 1</label>
     @Html.TextBoxFor(m => m.SINAV1, new { @class = "form-control" })
     <label for="SINAV2">SINAV 2</label>
@@ -22,14 +26,14 @@
     <label for="PROJE">PROJE</label>
     @Html.TextBoxFor(m => m.PROJE, new { @class = "form-control" })
     <label for="ORTALAMA">ORTALAMA</label>
-    @Html.TextBoxFor(m => m.ORTALAMA, new { @class = "form-control" })
+    @Html.TextBoxFor(m => m.ORTALAMA, new { @Value = @ViewBag.ortalama, @class = "form-control" })
     <label for="DURUM">DURUM</label>
     @Html.TextBoxFor(m => m.DURUM, new { @class = "form-control" })
 
 
-    <div class="">@ViewBag.ortalama</div>
+    <div class=""></div>
 
-    <div class="d-flex gap-4">
+    <div class="d-flex gap-4 mt-5">
         <button type="submit" name="islem" value="HESAPLA" class="btn btn-warning">ORTALAMA HESAPLA</button>
         <button type="submit" name="islem" value="NOTGUNCELLE" class="btn btn-success">NOT GÜNCELLE</button>
 

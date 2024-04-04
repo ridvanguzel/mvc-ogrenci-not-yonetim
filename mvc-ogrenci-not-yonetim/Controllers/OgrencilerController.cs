@@ -60,8 +60,13 @@ namespace mvc_ogrenci_not_yonetim.Controllers
             return RedirectToAction("Ogrenciler");
         }
 
+        [HttpGet]
         public ActionResult OgrenciGetir(int id)
         {
+
+
+          
+
 
             var ogrgetir = db.TBL_OGRENCILER.Find(id);
             return View("OgrenciGetir", ogrgetir);

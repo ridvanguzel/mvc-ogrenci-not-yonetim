@@ -21,6 +21,7 @@
 
     <label for="OGRKULUP">ÖĞRENCİ KULÜP</label>
     @Html.TextBoxFor(m => m.OGRKULUP, new { @class = "form-control" })
+@*@Html.DropDownListFor(m => m.TBL_KULUP.KULUPID, (List<SelectListItem>)ViewBag.klpdeger, new { @class = "form-control" })*@
 
     <label for="OGRFOTOGRAF">ÖĞRENCİ FOTOGRAF</label>
     @Html.TextBoxFor(m => m.OGRFOTOGRAF, new { @class = "form-control" })

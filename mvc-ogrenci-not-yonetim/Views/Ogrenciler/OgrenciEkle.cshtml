@@ -18,10 +18,11 @@
     <input type="text" name="OGRCINSIYET" value="" class="form-control mt-3" />
 
     <label>Öğrenci Kulüp :</label>
-   @Html.DropDownListFor(m => m.TBL_KULUP.KULUPID,(List<SelectListItem>)ViewBag.klpdeger, new {@class="form-control"})
+    <input type="text" name="OGRKULUP" value="" class="form-control mt-3" />
+    @*@Html.DropDownListFor(m => m.TBL_KULUP.KULUPID, (List<SelectListItem>)ViewBag.klpdeger, new { @class = "form-control" })*@
 
     @* Burada dropdownlistfor ile yazmamızın sebebi : lambda türtünde sorgular yazmak için *@
- 
+
     @* 4 parametre alır. 1.parametre dropdown adı, 2.parametre dropdown içindeki değerler  *@
     <label>Öğrenci Fotoğraf :</label>
     <input type="text" name="OGRFOTOGRAF" value="" class="form-control" />
